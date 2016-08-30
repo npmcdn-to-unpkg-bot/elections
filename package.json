@@ -1,0 +1,34 @@
+{
+  "name": "apu-elections",
+  "version": "1.0.0",
+  "description": "app script election app",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack -production --config webpack.prod.config.js",
+    "start": "webpack-dev-server --content-base public/ --inline"
+  },
+  "keywords": [
+    "ReactJS",
+    "app-script"
+  ],
+  "dependencies": {
+    "babel-polyfill": "^6.13.0",
+    "lodash": "^4.14.0",
+    "moment": "^2.14.1",
+    "react-progress": "0.0.12"
+  },
+  "author": "Ajay More",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.9.1",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "webpack": "^1.13.1",
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-hot-middleware": "^2.12.2"
+  },
+  "author": "Ajay More",
+  "license": "MIT"
+}
