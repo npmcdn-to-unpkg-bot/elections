@@ -62,6 +62,7 @@ const App = React.createClass({
 
     _submitForm(e) {
         e.preventDefault();
+        document.getElementById("submit-btn").disabled = true;
         if (!isProduction) {
             console.log(JSON.stringify({
                 boothDetails: localStorage.getItem('boothDetails'),
@@ -226,7 +227,7 @@ const App = React.createClass({
                             <Program programReady={this._programReady} candidates={this.state.candidates.program} />
                             <br/>
                             <p>
-                                <button onClick={this._submitForm}
+                                <button onClick={this._submitForm} id="submit-btn"
                                     disabled={!formCleanProgress}
                                     className="btn btn-primary" type="button">Submit my Vote</button>
                             </p>

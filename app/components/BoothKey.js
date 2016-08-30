@@ -44,7 +44,7 @@ const BoothKey = React.createClass({
                         <input type="text" className="form-control" id="booth-key" placeholder="Booth Key"
                             onChange={this.keyChange} value={this.state.key} />
                     </div>
-                    <button type="button" className="btn btn-default" onClick={this._setBooth}>Set Booth Info</button>
+                    <button type="button" className="btn btn-primary" onClick={this._setBooth}>Set Booth Info</button>
                 </form>
             </div>
         );
