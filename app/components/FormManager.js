@@ -1,4 +1,5 @@
 import FormApp from './FormApp';
+import PleaseWait from './PleaseWait';
 let isProduction = process.env.NODE_ENV === 'production';
 const FormManager = React.createClass({
 
@@ -51,7 +52,7 @@ const FormManager = React.createClass({
         return (
             <div>
                 {this.state.formReady ? <FormApp formSubmitted={this._formSubmitted} />
-                    : <p>Please wait while the form is being fetched...</p> }
+                    : <PleaseWait /> }
             </div>
         );
     }

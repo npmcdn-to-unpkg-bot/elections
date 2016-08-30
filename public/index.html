@@ -11,14 +11,190 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--<script src="https://npmcdn.com/react@15.3.0/dist/react.min.js"></script>
     <script src="https://npmcdn.com/react-dom@15.3.0/dist/react-dom.min.js"></script>-->
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
-        crossorigin="anonymous">-->
+    <link rel="stylesheet" href="bootstrap.css">
     <style>
         .post-block {
             border-bottom: 1px solid gray;
         }
+        
+        .preloader2 {
+            width: 72px;
+            height: 8px;
+            display: inline-block;
+            padding: 0px;
+            text-align: left;
+        }
+        
+        .preloader2 span {
+            position: absolute;
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 100%;
+            background: #000000;
+            opacity: 0.2;
+            -webkit-animation: preloader21 2s linear infinite alternate;
+            animation: preloader21 2s linear infinite alternate;
+        }
+        
+        .preloader2 span:nth-child(2) {
+            animation-name: preloader22;
+            -webkit-animation-name: preloader22;
+        }
+        
+        .preloader2 span:nth-child(3) {
+            animation-name: preloader23;
+            -webkit-animation-name: preloader23;
+        }
+        
+        .preloader2 span:nth-child(4) {
+            animation-name: preloader24;
+            -webkit-animation-name: preloader24;
+        }
+        
+        .preloader2 span:nth-child(5) {
+            animation-name: preloader25;
+            -webkit-animation-name: preloader25;
+        }
+        
+        @keyframes preloader21 {
+            0% {
+                margin-left: 0px;
+            }
+            50% {
+                margin-left: 64px;
+            }
+            100% {
+                margin-left: 64px;
+            }
+        }
+        
+        @-webkit-keyframes preloader21 {
+            0% {
+                margin-left: 0px;
+            }
+            50% {
+                margin-left: 64px;
+            }
+            100% {
+                margin-left: 64px;
+            }
+        }
+        
+        @keyframes preloader22 {
+            0% {
+                margin-left: 0px;
+            }
+            37.5% {
+                margin-left: 48px;
+            }
+            87.5% {
+                margin-left: 48px;
+            }
+            100% {
+                margin-left: 64px;
+            }
+        }
+        
+        @-webkit-keyframes preloader22 {
+            0% {
+                margin-left: 0px;
+            }
+            37.5% {
+                margin-left: 48px;
+            }
+            87.5% {
+                margin-left: 48px;
+            }
+            100% {
+                margin-left: 64px;
+            }
+        }
+        
+        @keyframes preloader23 {
+            0% {
+                margin-left: 0px;
+            }
+            25% {
+                margin-left: 32px;
+            }
+            75% {
+                margin-left: 32px;
+            }
+            100% {
+                margin-left: 64px;
+            }
+        }
+        
+        @-webkit-keyframes preloader23 {
+            0% {
+                margin-left: 0px;
+            }
+            25% {
+                margin-left: 32px;
+            }
+            75% {
+                margin-left: 32px;
+            }
+            100% {
+                margin-left: 64px;
+            }
+        }
+        
+        @keyframes preloader24 {
+            0% {
+                margin-left: 0px;
+            }
+            12.5% {
+                margin-left: 16px;
+            }
+            62.5% {
+                margin-left: 16px;
+            }
+            100% {
+                margin-left: 64px;
+            }
+        }
+        
+        @-webkit-keyframes preloader24 {
+            0% {
+                margin-left: 0px;
+            }
+            12.5% {
+                margin-left: 16px;
+            }
+            62.5% {
+                margin-left: 16px;
+            }
+            100% {
+                margin-left: 64px;
+            }
+        }
+        
+        @keyframes preloader25 {
+            0% {
+                margin-left: 0px;
+            }
+            50% {
+                margin-left: 0px;
+            }
+            100% {
+                margin-left: 64px;
+            }
+        }
+        
+        @-webkit-keyframes preloader25 {
+            0% {
+                margin-left: 0px;
+            }
+            50% {
+                margin-left: 0px;
+            }
+            100% {
+                margin-left: 64px;
+            }
+        }
+        .text-info{font-weight: bold;}
     </style>
 </head>
 

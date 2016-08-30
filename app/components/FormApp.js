@@ -4,6 +4,7 @@ import Placements from './Placements';
 import SSC from './SSC';
 import SRC from './SRC';
 import Program from './Program';
+import ThankYou from './ThankYou';
 import {candidateDefaults} from '../constants';
 import _ from 'lodash';
 const isProduction = process.env.NODE_ENV === 'production';
@@ -44,6 +45,7 @@ const App = React.createClass({
             fetchedState.dataAvailable = true;
             this.setState(fetchedState);
         } else {
+            console.log('getting the form data now...');
             google.script.run.withSuccessHandler((response) => {
                 console.log(response);
                 const fetchedState = JSON.parse(response);
@@ -236,7 +238,7 @@ const App = React.createClass({
 
         return (
             <div>
-                { this.state.votedAlready ? <h3>Your vote has been captured.</h3> : form }
+                { this.state.votedAlready ? <ThankYou /> : form }
             </div>
         );
     }
