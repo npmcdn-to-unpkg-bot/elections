@@ -14,6 +14,7 @@ const App = React.createClass({
     },
 
     componentDidMount() {
+        console.log(localStorage.getItem('boothDetails'));
         if (!isProduction) {
             localStorage.removeItem('boothDetails');
         }
@@ -79,7 +80,8 @@ const App = React.createClass({
 
         return (
             <div>
-                { this.state.keyValid ? <FormManager setKeysAgain={this._setKeysAgain} /> : <BoothKey keysSet={this._keysSet} /> }
+                { this.state.keyValid ? <FormManager setKeysAgain={this._setKeysAgain} />
+                    : <BoothKey keysSet={this._keysSet} /> }
             </div>
         );
     }

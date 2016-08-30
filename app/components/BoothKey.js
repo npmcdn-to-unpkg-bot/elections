@@ -16,6 +16,7 @@ const BoothKey = React.createClass({
 
     _setBooth() {
         localStorage.setItem('boothDetails', JSON.stringify(this.state));
+        console.log('booth set:', localStorage.getItem('boothDetails'));
         this.props.keysSet();
     },
 

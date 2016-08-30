@@ -1,6 +1,5 @@
 import FormApp from './FormApp';
 let isProduction = process.env.NODE_ENV === 'production';
-isProduction = true;
 const FormManager = React.createClass({
 
     getInitialState() {
@@ -10,6 +9,7 @@ const FormManager = React.createClass({
     },
 
     componentDidMount() {
+        console.log('form manager mounting');
         this.checkIfFormReady();
     },
 
@@ -17,6 +17,7 @@ const FormManager = React.createClass({
         if (!isProduction) {
             this.setState({ formReady: true });
         } else {
+            console.log('calling Ready Script');
             google.script.run.withSuccessHandler((response) => {
                 console.log(response);
                 let r = JSON.parse(response);
@@ -28,7 +29,7 @@ const FormManager = React.createClass({
                     this.setState({ formReady: false });
                     setTimeout(this.checkIfFormReady, 15000);
                 }
-            }).checkIfFormReady(function (message) {
+            }).withFailureHandler(function (message) {
                 console.log({
                     'status': 'There was a problem in processing your request',
                     error: message
